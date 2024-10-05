@@ -2,15 +2,13 @@ import { Link, Head } from '@inertiajs/react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser} from "@fortawesome/free-solid-svg-icons";
 import NavBar from "@/Components/CustomComponents/NavBar.jsx";
-import MyDebateList from "@/Components/CustomComponents/MyDebateList.jsx";
-import PostList from "@/Components/CustomComponents/PostList.jsx";
 
-export default function Home({ auth}) {
+export default function Search({ auth}) {
     return (
         <>
             <Head title="Home"/>
             <div
-                className="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-center selection:text-white bg-white dark:bg-black">
+                className="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-center  selection:text-white bg-white dark:bg-black">
                 <div className="sm:fixed sm:top-0 sm:right-0 p-6 text-end">
                     {auth.user ? (
                         <Link
@@ -21,7 +19,6 @@ export default function Home({ auth}) {
 
 
                         </Link>
-
                     ) : (
                         <>
                             <Link
@@ -40,10 +37,6 @@ export default function Home({ auth}) {
                         </>
                     )}
 
-                </div>
-                <div className="w-screen sm:fixed flex sm:justify-center sm:items-center min-h-screen">
-                    <MyDebateList/>
-                    <PostList/>
                 </div>
 
                 <NavBar/>

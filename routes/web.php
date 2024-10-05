@@ -38,7 +38,11 @@ Route::get('/dashboard', function () {
 
 Route::get('/explore', function () {
     return Inertia::render('Explore');
-})->middleware(['auth', 'verified'])->name('explore');
+})->name('explore');
+
+Route::get('/search', function () {
+    return Inertia::render('Search');
+})->name('search');
 
 
 Route::get('/following', function () {

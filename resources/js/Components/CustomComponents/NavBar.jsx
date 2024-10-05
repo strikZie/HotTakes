@@ -9,7 +9,7 @@ export default function NavBar({ auth}) {
     return (
         <>
 
-            <div className="sm:fixed sm:bottom-2 w-60 h-10 rounded-lg bg-gray-200 grid grid-cols-4 content-stretch">
+            <div className="sm:fixed sm:bottom-2 w-60 h-10 rounded-lg bg-white border-solid border-2 border-gray-400 grid grid-cols-4 content-stretch">
 
                     <>
                         <Link className="flex justify-center items-center size-full" href={route('home')} >
@@ -23,7 +23,7 @@ export default function NavBar({ auth}) {
                         </Link>
                     </>
                     <>
-                        <Link className="flex justify-center items-center size-full">
+                        <Link href={route('search')} className="flex justify-center items-center size-full">
                             <FontAwesomeIcon icon={faMagnifyingGlass} className=" text-gray-400 hover:size-5 ease-in-out duration-300 hover:text-gray-600 active:text-gray-800"/>
                         </Link>
                     </>
