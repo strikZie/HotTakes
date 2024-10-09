@@ -6,7 +6,7 @@ import DebateItem from "@/Components/CustomComponents/DebateItem.jsx";
 
 function MyDebateList() {
     return (
-        <div className="w-1/4 h-full bg-white sm:fixed left-0  ">
+        <div className="w-1/4 h-full bg-white sm:fixed left-0 shadow-md ">
             <div className="text-xl font-bold
              ml-3 mr-3 mt-2 max-w-full h-10 flex  items-center justify-center
              drop-shadow-md shadow-xl rounded border-solid border-2 border-gray-400">My Debates</div>

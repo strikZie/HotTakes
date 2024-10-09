@@ -24,6 +24,7 @@
         "@fortawesome/free-regular-svg-icons": "^6.6.0",
         "@fortawesome/free-solid-svg-icons": "^6.6.0",
         "@fortawesome/react-fontawesome": "^0.2.2",
+        "@mui/base": "^5.0.0-beta.58",
         "font-awesome-animation": "^1.1.1",
         "prop-types": "^15.8.1"
     }

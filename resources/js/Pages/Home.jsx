@@ -4,13 +4,15 @@ import {faUser} from "@fortawesome/free-solid-svg-icons";
 import NavBar from "@/Components/CustomComponents/NavBar.jsx";
 import MyDebateList from "@/Components/CustomComponents/MyDebateList.jsx";
 import PostList from "@/Components/CustomComponents/PostList.jsx";
+import TrendingList from "@/Components/CustomComponents/TrendingList.jsx";
+
 
 export default function Home({ auth}) {
     return (
         <>
             <Head title="Home"/>
             <div
-                className="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-center selection:text-white bg-white dark:bg-black">
+                className="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-center dark:selection:bg-indigo-200 bg-white dark:bg-black">
                 <div className="sm:fixed sm:top-0 sm:right-0 p-6 text-end">
                     {auth.user ? (
                         <Link
@@ -44,6 +46,7 @@ export default function Home({ auth}) {
                 <div className="w-screen sm:fixed flex sm:justify-center sm:items-center min-h-screen">
                     <MyDebateList/>
                     <PostList/>
+                    <TrendingList/>
                 </div>
 
                 <NavBar/>
