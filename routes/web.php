@@ -30,6 +30,7 @@ Route::get('/home', function () {
 })->middleware(['auth', 'verified'])->name('home');
 
 
+Route::get('/u/{username}', [ProfileController::class, 'index'])->name('profile');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -48,8 +49,6 @@ Route::get('/search', function () {
 Route::get('/following', function () {
     return Inertia::render('Following');
 })->middleware(['auth', 'verified'])->name('following');
-
-
 
 
 
