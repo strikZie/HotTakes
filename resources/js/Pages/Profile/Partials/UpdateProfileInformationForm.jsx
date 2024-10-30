@@ -31,7 +31,7 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
 
             <form onSubmit={submit} className="mt-6 space-y-6">
                 <div>
-                    <InputLabel htmlFor="name" value="Name" />
+                    <InputLabel htmlFor="name" value="Name"/>
 
                     <TextInput
                         id="name"
@@ -43,11 +43,25 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                         autoComplete="name"
                     />
 
-                    <InputError className="mt-2" message={errors.name} />
+                    <InputError className="mt-2" message={errors.name}/>
                 </div>
 
                 <div>
-                    <InputLabel htmlFor="email" value="Email" />
+                    <InputLabel htmlFor="username" value="Username"/>
+
+                    <TextInput
+                        id="name"
+                        className="mt-1 block w-full read-only:"
+                        value={user.username}
+                        isFocused
+                        autoComplete="name"
+                    />
+
+                    <InputError className="mt-2" message={errors.name}/>
+                </div>
+
+                <div>
+                    <InputLabel htmlFor="email" value="Email"/>
 
                     <TextInput
                         id="email"
@@ -59,7 +73,7 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                         autoComplete="username"
                     />
 
-                    <InputError className="mt-2" message={errors.email} />
+                    <InputError className="mt-2" message={errors.email}/>
                 </div>
 
                 {mustVerifyEmail && user.email_verified_at === null && (

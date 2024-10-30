@@ -6,9 +6,9 @@ import DebateItem from "@/Components/CustomComponents/DebateItem.jsx";
 
 function MyDebateList() {
     return (
-        <div className="w-1/4 h-full bg-white sm:fixed left-0 shadow-md ">
+        <div className="w-full h-full bg-white ">
             <div className="text-xl font-bold
-             ml-3 mr-3 mt-2 max-w-full h-10 flex  items-center justify-center
+             ml-3 mr-3  max-w-full h-10 flex  items-center justify-center
              drop-shadow-md shadow-xl rounded border-solid border-2 border-gray-400">My Debates</div>
             <div className="h-full overflow-y-auto flex flex-col pb-10 pt-4">
                 <DebateItem name="ISRAEL Vs PALESTINE" link="home" description="Discussing the war between israel and palestine" participants={21}/>

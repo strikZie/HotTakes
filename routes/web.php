@@ -30,11 +30,9 @@ Route::get('/home', function () {
 })->middleware(['auth', 'verified'])->name('home');
 
 
-Route::get('/u/{username}', [ProfileController::class, 'index'])->name('profile');
+Route::get('/u/{user:username}', [ProfileController::class, 'index'])->name('profile.index');
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
 
 
 Route::get('/explore', function () {
