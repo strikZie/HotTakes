@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 import CreatePostBar from "@/Components/CustomComponents/CreatePostBar.jsx";
 import PostItem from "@/Components/CustomComponents/PostItem.jsx";
 
-function PostList() {
+function PostList({classname}) {
     const post1 = {
         owner : {
             id: 1,
@@ -18,7 +18,7 @@ function PostList() {
 
 
     return (
-        <div className="w-2/4 h-full flex flex-col bg-gray-200 items-center space-y-20 sm:fixed">
+        <div className={classname+" w-2/4 h-full flex flex-col bg-gray-200 items-center space-y-20 sm:fixed"}>
 
             <div className="h-full w-full flex flex-col overflow-y-auto items-center">
                 <CreatePostBar/>

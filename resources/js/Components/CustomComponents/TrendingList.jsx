@@ -1,8 +1,8 @@
 import React from 'react';
 
-function TrendingList(props) {
+function TrendingList() {
     return (
-        <div className="w-1/4 h-full bg-white sm:fixed right-0 shadow-md">
+        <div className="w-full h-full bg-white shadow-md">
 
             <div className="h-full overflow-y-auto flex flex-col pb-10 pt-4">
                 <div

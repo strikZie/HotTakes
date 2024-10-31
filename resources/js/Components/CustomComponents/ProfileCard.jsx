@@ -11,7 +11,7 @@ function ProfileCard({ auth}) {
             {auth.user ? (
                 <div className="flex flex-row items-center w-full">
                     <div className="flex flex-row h-20 gap-4 pt-2 pb-2 items-center basis-3/4">
-                        <a href="/profile">
+                        <a href={route('profile.index',{user: auth.user})}>
                             <img src="https://randomuser.me/api/portraits/women/20.jpg"
                                  className="h-16 w-16 ml-3 rounded-full shadow-md"/>
                         </a>
@@ -35,6 +35,8 @@ function ProfileCard({ auth}) {
                         </Dropdown.Trigger>
 
                         <Dropdown.Content>
+                            <Dropdown.Link href={route('profile.index',{user: auth.user})}>Profile</Dropdown.Link>
+
                             <Dropdown.Link href={route('profile.edit')}>Profile Settings</Dropdown.Link>
                             <Dropdown.Link href={route('logout')} method="post" as="button">
                                 Log Out
@@ -49,7 +51,7 @@ function ProfileCard({ auth}) {
                     <div className="flex flex-row items-center w-full pl-6 pr-6">
                         <div className="flex flex-row h-20 w-full gap-32 pt-2 pb-2 items-center justify-between">
                             <a href="/profile" className="min-h-16 min-w-16 flex flex-row items-center">
-                                <img src="images/placeholderUserImage.jpg"
+                                <img src="/images/placeholderUserImage.jpg"
                                      className="h-16 w-16  rounded-full shadow-md"/>
                                 <div className="font-bold text-xl">GUEST</div>
 

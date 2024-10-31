@@ -33,8 +33,6 @@ Route::get('/home', function () {
 Route::get('/u/{user:username}', [ProfileController::class, 'index'])->name('profile.index');
 
 
-
-
 Route::get('/explore', function () {
     return Inertia::render('Explore');
 })->name('explore');

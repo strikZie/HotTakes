@@ -7,6 +7,7 @@ import PostList from "@/Components/CustomComponents/PostList.jsx";
 import TrendingList from "@/Components/CustomComponents/TrendingList.jsx";
 import ProfileCard from "@/Components/CustomComponents/ProfileCard.jsx";
 import LeftWindow from "@/Components/CustomComponents/LeftWindow.jsx";
+import RightWindow from "@/Components/CustomComponents/RightWindow.jsx";
 
 
 export default function Home({ auth}) {
@@ -16,10 +17,10 @@ export default function Home({ auth}) {
             <div
                 className="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-center dark:selection:bg-indigo-200 bg-white dark:bg-black">
 
-                <div className="w-screen sm:fixed flex sm:justify-center sm:items-center min-h-screen">
-                    <LeftWindow auth={auth}/>
-                    <PostList/>
-                    <TrendingList/>
+                <div className="w-screen sm:fixed flex  sm:justify-center sm:items-center min-h-screen">
+                    <LeftWindow auth={auth} classname="w-1/5"/>
+                    <PostList classname="w-3/5"/>
+                    <RightWindow classname="w-1/5"/>
                 </div>
 
                 <NavBar/>
