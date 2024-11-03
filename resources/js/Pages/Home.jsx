@@ -1,4 +1,4 @@
-import { Link, Head } from '@inertiajs/react';
+import {Link, Head, usePage} from '@inertiajs/react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser} from "@fortawesome/free-solid-svg-icons";
 import NavBar from "@/Components/CustomComponents/NavBar.jsx";
@@ -10,7 +10,8 @@ import LeftWindow from "@/Components/CustomComponents/LeftWindow.jsx";
 import RightWindow from "@/Components/CustomComponents/RightWindow.jsx";
 
 
-export default function Home({ auth}) {
+export default function Home({ posts}) {
+    const auth = usePage().props.auth;
     return (
         <>
             <Head title="Home"/>
