@@ -22,7 +22,19 @@ function PostList({classname, posts}) {
 
             <div className="h-full w-full flex flex-col overflow-y-auto items-center">
                 <CreatePostBar/>
-
+                {posts.map((element, i) => {
+                        const tempPost = {
+                            owner : {
+                                id: element.user.id,
+                                name: element.user.name,
+                                avatar: 'https://randomuser.me/api/portraits/women/20.jpg'
+                            },
+                            createdDate: element.created_at,
+                            title: element.title,
+                            content: element.content
+                        }
+                        return <PostItem post={tempPost}/>
+                })}
                 <PostItem post={post1}/>
                 <PostItem post={post1}/>
                 <PostItem post={post1}/>
