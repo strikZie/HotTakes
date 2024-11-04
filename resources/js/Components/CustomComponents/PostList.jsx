@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 import CreatePostBar from "@/Components/CustomComponents/CreatePostBar.jsx";
 import PostItem from "@/Components/CustomComponents/PostItem.jsx";
 
-function PostList({classname}) {
+function PostList({classname, posts}) {
     const post1 = {
         owner : {
             id: 1,
@@ -22,16 +22,14 @@ function PostList({classname}) {
 
             <div className="h-full w-full flex flex-col overflow-y-auto items-center">
                 <CreatePostBar/>
-                <PostItem post={post1}/>
-                <PostItem post={post1}/>
-                <PostItem post={post1}/>
-                <PostItem post={post1}/>
-                <PostItem post={post1}/>
-                <PostItem post={post1}/>
-                <PostItem post={post1}/>
 
-
-
+                <PostItem post={post1}/>
+                <PostItem post={post1}/>
+                <PostItem post={post1}/>
+                <PostItem post={post1}/>
+                <PostItem post={post1}/>
+                <PostItem post={post1}/>
+                <PostItem post={post1}/>
 
             </div>
 

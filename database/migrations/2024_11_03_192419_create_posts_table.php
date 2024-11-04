@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('title');
             $table->tinyText('content');
             $table->foreignId('user_id')->constrained('users');
-            $table->timestamp('created_at')->nullable();
             $table->timestamps();
         });
     }

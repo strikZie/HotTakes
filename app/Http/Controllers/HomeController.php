@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\PostResource;
 use App\Models\Post;
 use App\Models\User;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -17,10 +19,12 @@ class HomeController extends Controller
 
     public function index()
     {
-        $posts = Post::query()->paginate(10);
+        $posts = Post::query()->latest()->paginate(10);
         return Inertia::render('Home',[
-            'posts'=>$posts
+            'posts'=>PostResource::collection($posts),
         ]);
     }
+
+
 
 }

@@ -12,6 +12,7 @@ import RightWindow from "@/Components/CustomComponents/RightWindow.jsx";
 
 export default function Home({ posts}) {
     const auth = usePage().props.auth;
+    console.log(posts)
     return (
         <>
             <Head title="Home"/>
@@ -20,7 +21,7 @@ export default function Home({ posts}) {
 
                 <div className="w-screen sm:fixed flex  sm:justify-center sm:items-center min-h-screen">
                     <LeftWindow auth={auth} classname="w-1/5"/>
-                    <PostList classname="w-3/5"/>
+                    <PostList classname="w-3/5" posts={posts}/>
                     <RightWindow classname="w-1/5"/>
                 </div>
 
