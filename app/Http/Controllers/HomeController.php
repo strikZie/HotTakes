@@ -20,8 +20,12 @@ class HomeController extends Controller
     public function index()
     {
         $posts = Post::query()->latest()->paginate(10);
+        $posts->withPath('/');
+
         return Inertia::render('Home',[
             'posts'=>PostResource::collection($posts),
+            'currentPageNr'=>$posts->currentPage(),
+            'lastPageNr'=>$posts->lastPage(),
         ]);
     }
 

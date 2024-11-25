@@ -8,11 +8,13 @@ import TrendingList from "@/Components/CustomComponents/TrendingList.jsx";
 import ProfileCard from "@/Components/CustomComponents/ProfileCard.jsx";
 import LeftWindow from "@/Components/CustomComponents/LeftWindow.jsx";
 import RightWindow from "@/Components/CustomComponents/RightWindow.jsx";
+import PaginationBar from "@/Components/CustomComponents/PaginationBar.jsx";
+import React from "react";
 
 
-export default function Home({ posts}) {
+export default function Home({ posts, currentPageNr, lastPageNr}) {
     const auth = usePage().props.auth;
-    console.log(posts)
+    console.log(posts, posts.links,"gh", posts.links.first)
     return (
         <>
             <Head title="Home"/>
@@ -26,7 +28,7 @@ export default function Home({ posts}) {
                 </div>
 
                 <NavBar/>
-
+                <PaginationBar classname="fixed right-0 bottom-0" currentPageNr={currentPageNr} nextPagePath={"/?page="+(currentPageNr+1)} previousPagePath={"/?page="+(currentPageNr-1)}/>
             </div>
 
 
