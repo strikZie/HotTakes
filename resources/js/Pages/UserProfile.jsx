@@ -16,9 +16,9 @@ export default function UserProfile({user}) {
 
         <div className="w-screen h-screen sm:fixed flex  sm:justify-center sm:items-center ">
             <Head title={user.username} />
-            <LeftWindow  auth={usePage().props.auth} classname="w-1/5"/>
-            <ProfileWindow user={user} classname="w-3/5"/>
-            <RightWindow classname="w-1/5"/>
+            <LeftWindow  auth={usePage().props.auth} classname="w-1/5 max-lg:hidden"/>
+            <ProfileWindow user={user} classname="w-3/5 max-lg:w-full"/>
+            <RightWindow classname="w-1/5 max-lg:hidden"/>
             <NavBar/>
         </div>
 

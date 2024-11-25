@@ -48,15 +48,17 @@ function ProfileCard({ auth, classname}) {
 
             ) : (
                 <>
-                    <div className="flex flex-row items-center w-full pl-6 pr-6">
-                        <div className="flex flex-row h-20 w-full gap-32 pt-2 pb-2 items-center justify-between">
+                    <div className="flex flex-row  items-center w-full pl-2">
+                        <div
+                            className="flex flex-row h-20 w-full pt-2 pb-2 items-center justify-between  overflow-hidden">
                             <a href="/profile" className="min-h-16 min-w-16 flex flex-row items-center">
                                 <img src="/images/placeholderUserImage.jpg"
                                      className="h-16 w-16  rounded-full shadow-md"/>
-                                <div className="font-bold text-xl">GUEST</div>
+
 
                             </a>
-                            <div className=" h-fit flex flex-row items-center right-0 gap-2">
+                            <div className="font-bold text-xl">GUEST</div>
+                            <div className=" h-fit flex flex-col xl:flex-row items-center right-0">
                                 <a href="/login" className="">
                                     <button
                                         className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm
@@ -66,8 +68,7 @@ function ProfileCard({ auth, classname}) {
                                 <a href="/register" className="">
                                     <button
                                         className="rounded-md bg-gray-400 px-3 py-2 text-sm font-semibold text-white shadow-sm
-                    hover:bg-gray-600 active:bg-gray-800 active:outline active:outline-2 active:outline-offset-2 active:outline-indigo-600">SIGN
-                                        UP
+                    hover:bg-gray-600 active:bg-gray-800 active:outline active:outline-2 active:outline-offset-2 active:outline-indigo-600">SIGNUP
                                     </button>
                                 </a>
                             </div>
