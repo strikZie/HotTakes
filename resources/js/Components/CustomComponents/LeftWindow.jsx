@@ -7,7 +7,7 @@ import {faUser} from "@fortawesome/free-solid-svg-icons";
 
 function LeftWindow({auth, classname}) {
     return (
-        <div className={classname+" w-1/4 h-full sm:fixed sm:left-0 shadow-md flex-col space-y-0"}>
+        <div className={classname+" w-1/4 h-full sm:fixed sm:left-0 shadow-md flex-col space-y-0 max-lg:hidden"}>
             <ProfileCard auth={auth}/>
 
             <MyDebateList/>

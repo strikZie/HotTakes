@@ -22,15 +22,7 @@ function MyDebateList() {
                 <DebateItem name="Lebanon is GAY???!??" link="home" description="Is Lebanon GAY no socks on" participants={564}/>
                 <DebateItem name="Lebanon is GAY???!??" link="home" description="Is Lebanon GAY no socks on" participants={564}/>
                 <DebateItem name="Lebanon is GAY???!??" link="home" description="Is Lebanon GAY no socks on" participants={564}/>
-                <DebateItem name="Lebanon is GAY???!??" link="home" description="Is Lebanon GAY no socks on" participants={564}/>
-                <DebateItem name="Lebanon is GAY???!??" link="home" description="Is Lebanon GAY no socks on" participants={564}/>
-                <DebateItem name="Lebanon is GAY???!??" link="home" description="Is Lebanon GAY no socks on" participants={564}/>
-                <DebateItem name="Lebanon is GAY???!??" link="home" description="Is Lebanon GAY no socks on" participants={564}/>
-                <DebateItem name="Lebanon is GAY???!??" link="home" description="Is Lebanon GAY no socks on" participants={564}/>
-                <DebateItem name="Lebanon is GAY???!??" link="home" description="Is Lebanon GAY no socks on" participants={564}/>
-                <DebateItem name="Lebanon is GAY???!??" link="home" description="Is Lebanon GAY no socks on" participants={32}/>
-                <DebateItem name="Lebanon is GAY???!??" link="home" description="Is Lebanon GAY no socks on" participants={564}/>
-                <DebateItem name="Lebanon is GAY???!??" link="home" description="Is Lebanon GAY no socks on" participants={23}/>
+
             </div>
 
         </div>

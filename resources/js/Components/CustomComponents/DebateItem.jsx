@@ -13,13 +13,13 @@ DebateItem.propTypes = {
 
 function DebateItem({name, description, link, participants}) {
     return (
-        <div className="flex items-center gap-3  mb-3 ml-5 mr-5 min-w-fit max-w-full min-h-20 max-h-fit rounded-lg bg-gray-200 justify-between snap-start ">
+        <div className="flex items-center gap-3  mb-3 ml-5 mr-5 w-full min-h-20 max-h-fit rounded-lg bg-gray-200 justify-between snap-start ">
             <FontAwesomeIcon className="ml-3" icon={faMessage} />
-            <div className="w-full">
+            <div className="w-full h-full">
                 <a className="font-bold" href={route(link)}>
                     {name}
                 </a>
-                <p className="text-gray-600">{description}</p>
+                <p className="text-gray-600 truncate w-full">{description}</p>
             </div>
             <FontAwesomeIcon className="" icon={faUsers} />
             <p className="mr-4 font-bold">{participants}</p>

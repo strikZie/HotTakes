@@ -12,16 +12,16 @@ PostItem.propTypes = {
 function PostItem({post}) {
 
     return (
-        <div className="w-full pl-32 pr-32 flex space-y-8">
+        <div className="w-full pl-12 pr-12 flex space-y-8">
             <link
                 href=" https://cdn.jsdelivr.net/npm/font-awesome-animation@1.1.1/css/font-awesome-animation.min.css "
                 rel="stylesheet"/>
             <div className="flex flex-col w-full h-fit bg-white rounded-lg shadow-md">
                 <div className="flex flex-row h-20 mt-3 gap-4">
                     <img src={post.owner.avatar} className="h-16 w-16 ml-3 rounded-full shadow-md"/>
-                    <div>
+                    <div className="overflow-hidden">
                         <div className="font-bold text-xl">{post.owner.name}</div>
-                        <div className="">{post.title}</div>
+                        <div className="text-ellipsis overflow-hidden">{post.title}</div>
                     </div>
                 </div>
 
@@ -36,8 +36,8 @@ function PostItem({post}) {
                             <div>99</div>
                         </button>
                     </div>
-                    <div className="flex flex-col justify-between mb-2">
-                        <div className="max-h-full overflow-hidden">
+                    <div className="flex flex-col justify-between mb-2 w-full overflow-hidden">
+                        <div className="max-h-full overflow-hidden text-ellipsis break-words pr-4">
                             {post.content}
                         </div>
                         <div className="max-h-full overflow-hidden text-gray-400">
