@@ -5,20 +5,20 @@ import {faEllipsis, faUser} from "@fortawesome/free-solid-svg-icons";
 import {faHeart} from "@fortawesome/free-regular-svg-icons";
 import Dropdown from "@/Components/Dropdown.jsx";
 
-function ProfileCard({ auth}) {
+function ProfileCard({ auth, classname}) {
     return (
-        <div className="w-full h-20 bg-white ">
+        <div className={classname+" w-full bg-white "}>
             {auth.user ? (
-                <div className="flex flex-row items-center w-full">
-                    <div className="flex flex-row h-20 gap-4 pt-2 pb-2 items-center basis-3/4">
+                <div className="flex flex-row items-center w-full ">
+                    <div className="flex flex-row h-full gap-4 pt-2 pb-2 items-center text-ellipsis overflow-hidden">
                         <a href={route('profile.index',{user: auth.user})}>
                             <img src="https://randomuser.me/api/portraits/women/20.jpg"
                                  className="h-16 w-16 ml-3 rounded-full shadow-md"/>
                         </a>
 
-                        <div>
-                            <div className="font-bold text-xl">{auth.user.name}</div>
-                            <div className="">{"@" + auth.user.username}</div>
+                        <div className="h-full">
+                            <div className="font-bold text-xl text-ellipsis overflow-hidden h-5/6">{auth.user.name}</div>
+                            <div className="h-1/6 text-ellipsis overflow-hidden">{"@" + auth.user.username}</div>
                         </div>
                     </div>
                     <Dropdown>

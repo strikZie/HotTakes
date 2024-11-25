@@ -13,9 +13,9 @@ DebateItem.propTypes = {
 
 function DebateItem({name, description, link, participants}) {
     return (
-        <div className="flex items-center gap-3  mb-3 ml-5 mr-5 w-full min-h-20 max-h-fit rounded-lg bg-gray-200 justify-between snap-start ">
+        <div className="flex items-center gap-2 mb-3 mr-2 ml-2 min-h-20 rounded-lg bg-gray-200 justify-between snap-start ">
             <FontAwesomeIcon className="ml-3" icon={faMessage} />
-            <div className="w-full h-full">
+            <div className=" text-ellipsis overflow-hidden">
                 <a className="font-bold" href={route(link)}>
                     {name}
                 </a>

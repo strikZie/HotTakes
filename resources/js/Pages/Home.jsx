@@ -20,9 +20,9 @@ export default function Home({ posts}) {
                 className="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-center dark:selection:bg-indigo-200 bg-white dark:bg-black">
 
                 <div className="w-screen sm:fixed flex  sm:justify-center sm:items-center min-h-screen">
-                    <LeftWindow auth={auth} classname="w-1/5 "/>
+                    <LeftWindow auth={auth} classname="w-1/5 max-lg:hidden"/>
                     <PostList classname="w-3/5 max-lg:w-full" posts={posts.data}/>
-                    <RightWindow classname="w-1/5"/>
+                    <RightWindow classname="w-1/5 max-lg:hidden"/>
                 </div>
 
                 <NavBar/>

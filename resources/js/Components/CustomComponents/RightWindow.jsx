@@ -8,7 +8,7 @@ import TrendingList from "@/Components/CustomComponents/TrendingList.jsx";
 
 function RightWindow({classname}) {
     return (
-        <div className={classname+" w-1/4 h-full sm:fixed sm:right-0 shadow-md flex-col space-y-0 max-lg:hidden"}>
+        <div className={classname+" w-1/4 h-full sm:fixed sm:right-0 shadow-md flex-col space-y-0"}>
             <TrendingList/>
         </div>
     );
