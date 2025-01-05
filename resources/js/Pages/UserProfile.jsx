@@ -20,6 +20,8 @@ export default function UserProfile({user}) {
             <ProfileWindow user={user} classname="w-3/5 max-lg:w-full"/>
             <RightWindow classname="w-1/5 max-lg:hidden"/>
             <NavBar/>
+
+
         </div>
 
 

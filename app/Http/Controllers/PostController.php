@@ -6,6 +6,7 @@ use App\Http\Requests\StorePostRequest;
 use App\Models\Post;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
+use MongoDB\Driver\Session;
 
 class PostController extends Controller
 {
@@ -23,10 +24,10 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-
         $data = $request->validated();
 
         Post::create($data);
+        session()->flash('success', 'Post successfully created!');
 
         return redirect(RouteServiceProvider::HOME);
 

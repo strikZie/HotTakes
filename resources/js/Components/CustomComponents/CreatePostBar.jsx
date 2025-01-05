@@ -32,6 +32,7 @@ function CreatePostBar() {
 
     return (
         <form onSubmit={CreatePost} className="w-full flex flex-row justify-center">
+
             <div
                 className=" flex flex-row justify-center gap-4 mt-3 max-w-full  fixed drop-shadow-[0_5px_5px_rgba(0,0,0,0.50)] ">
                 <div className="flex flex-col justify-center bg-white p-2 rounded">

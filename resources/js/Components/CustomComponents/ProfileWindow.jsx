@@ -29,7 +29,7 @@ function ProfileWindow({user, classname}) {
                     </div>
                 </div>
             </div>
-
+            
 
         </div>
     );

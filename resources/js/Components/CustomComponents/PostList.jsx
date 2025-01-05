@@ -1,15 +1,19 @@
-import React, {useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import CreatePostBar from "@/Components/CustomComponents/CreatePostBar.jsx";
 import PostItem from "@/Components/CustomComponents/PostItem.jsx";
 import PaginationBar from "@/Components/CustomComponents/PaginationBar.jsx";
 
 function PostList({classname, posts}) {
+
+
+
     return (
 
         <div className={classname+" w-2/4 h-full flex flex-col bg-gray-200 items-center space-y-20 sm:fixed"}>
 
             <div className="h-full w-full flex flex-col overflow-y-auto items-center">
                 <CreatePostBar/>
+
                 {posts.map((element, i) => {
                         const tempPost = {
                             owner : {

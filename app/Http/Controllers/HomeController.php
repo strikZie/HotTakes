@@ -19,6 +19,7 @@ class HomeController extends Controller
 
     public function index()
     {
+
         $posts = Post::query()->latest()->paginate(10);
         $posts->withPath('/');
 
@@ -26,6 +27,7 @@ class HomeController extends Controller
             'posts'=>PostResource::collection($posts),
             'currentPageNr'=>$posts->currentPage(),
             'lastPageNr'=>$posts->lastPage(),
+            'sessionMessage'=>session('success'),
         ]);
     }
 
